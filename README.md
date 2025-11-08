@@ -2,6 +2,8 @@
 
 A comprehensive startup idea validation tool that uses AI-powered web search and semantic research to analyze startup ideas.
 
+**Powered by [Dedalus Labs](https://dedalus.ai/)** - An AI agent platform that enables seamless integration with MCP servers for advanced research and analysis.
+
 ## Features
 
 - **Market Analysis**: Research market size, growth potential, and trends
@@ -12,7 +14,9 @@ A comprehensive startup idea validation tool that uses AI-powered web search and
 
 ## How It Works
 
-This validator uses two MCP (Model Context Protocol) servers:
+This validator is powered by **Dedalus Labs**, which orchestrates AI agents with MCP (Model Context Protocol) servers for comprehensive startup analysis.
+
+The system uses two MCP servers through Dedalus Labs:
 
 1. **brave-search-mcp** (`windsor/brave-search-mcp`): Real-time web search for current market data, competitors, and trends
 2. **exa-mcp** (`joerup/exa-mcp`): Semantic search for deep analysis and research
@@ -24,14 +28,17 @@ This validator uses two MCP (Model Context Protocol) servers:
 uv pip install -r requirements.txt
 ```
 
-2. Set up your environment variables in `.env`:
-```
-OPENAI_API_KEY=your_openai_api_key_here
+2. Copy the example environment file and configure your API keys:
+```bash
+cp .env.example .env
 ```
 
-3. Ensure your MCP servers are configured:
-   - `joerup/exa-mcp` should be configured with your Exa API key
-   - `windsor/brave-search-mcp` should be configured with your Brave Search API key
+3. Set up your environment variables in `.env`:
+```
+DEDALUS_API_KEY=your_dedalus_api_key_here
+```
+
+**Note**: Get your Dedalus Labs API key from [https://dedalus.ai/](https://dedalus.ai/). The MCP servers (exa-mcp and brave-search-mcp) are automatically configured through Dedalus Labs.
 
 ## Usage
 
@@ -77,8 +84,6 @@ The validator provides:
 ## Requirements
 
 - Python 3.8+
-- OpenAI API key
-- Exa API key (for exa-mcp)
-- Brave Search API key (for brave-search-mcp)
-- Configured MCP servers
+- Dedalus Labs API key (get it from [https://dedalus.ai/](https://dedalus.ai/))
+- MCP servers are automatically configured through Dedalus Labs
 

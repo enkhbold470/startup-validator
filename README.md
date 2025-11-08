@@ -36,7 +36,6 @@ cp .env.example .env
 3. Set up your environment variables in `.env`:
 ```
 DEDALUS_API_KEY=your_dedalus_api_key_here
-OPENAI_API_KEY=your_openai_api_key_here
 ```
 
 **Note**: Get your Dedalus Labs API key from [https://dedalus.ai/](https://dedalus.ai/). The MCP servers (exa-mcp and brave-search-mcp) are automatically configured through Dedalus Labs.
@@ -86,6 +85,5 @@ The validator provides:
 
 - Python 3.8+
 - Dedalus Labs API key (get it from [https://dedalus.ai/](https://dedalus.ai/))
-- OpenAI API key
 - MCP servers are automatically configured through Dedalus Labs
 
